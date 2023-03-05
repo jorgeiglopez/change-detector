@@ -1,4 +1,4 @@
-package com.jorgeiglopez.changedetector.persistence.model.wal;
+package com.jorgeiglopez.changedetector.persistence.model.postgres;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;

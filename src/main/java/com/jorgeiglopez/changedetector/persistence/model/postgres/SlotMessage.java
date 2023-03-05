@@ -1,4 +1,4 @@
-package com.jorgeiglopez.changedetector.persistence.model.wal;
+package com.jorgeiglopez.changedetector.persistence.model.postgres;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -24,5 +24,13 @@ public class SlotMessage {
 
     public List<Change> getChange() {
         return change;
+    }
+
+    @Override public String toString() {
+        String result = "(" + change.size() + ") ";
+        for(Change c : change) {
+            result += c.toString() + " _*_ ";
+        }
+        return result;
     }
 }
